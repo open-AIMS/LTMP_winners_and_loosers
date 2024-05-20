@@ -20,8 +20,6 @@ benthic <- fish.benthic.2024 |>
   mutate(REPORT_YEAR = as.numeric(as.character(cREPORT_YEAR))) |>
   dplyr::select(AIMS_REEF_NAME, REEFSITE, REEFSITETRANSECT, REPORT_YEAR, Decade, HC) |>
   mutate(
-    ## SITE_NO = str_replace(REEFSITE, paste0(toupper(AIMS_REEF_NAME), ".*([0-9]$)"), "\\1"),
-    ## TRANSECT_NO = str_replace(REEFSITETRANSECT, paste0(toupper(AIMS_REEF_NAME), ".*([0-9]$)"), "\\1")
     SITE_NO = str_replace(REEFSITE, ".*([0-9]$)", "\\1"),
     TRANSECT_NO = str_replace(REEFSITETRANSECT, ".*([0-9]$)", "\\1")
   ) |>

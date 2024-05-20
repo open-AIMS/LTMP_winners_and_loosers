@@ -4,6 +4,7 @@ library(INLA)
 library(readxl)
 library(glmmTMB)
 library(brms)
+library(emmeans)
 ## ----end
 
 ## ---- load_functions
@@ -17,4 +18,8 @@ source("../R/02_prepare_paths.R")
 
 ## ---- process_data
 source("10_process_data.R")
+## ----end
+
+## ---- fit_models
+source("20_fit_models.R")
 ## ----end
